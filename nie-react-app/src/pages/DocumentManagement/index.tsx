@@ -1,5 +1,5 @@
 import React from 'react';
-import DraggableTreeMenu from "./components/draggabletreeMenu";
+import DraggableTreeMenu from "./components/DraggableTreeMenu";
 const DocumentManagement = () => {
   return (
     <div>

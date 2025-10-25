@@ -10,14 +10,17 @@ import {
 
 // 导航项配置
 const navItems = [
-  { path: "/homepage", title: "Homepage", icon: <HomeOutlined /> },
-  { path: "/usermanagement", title: "UserManagement", icon: <UserOutlined /> },
-  { path: "/pdftopic", title: "PdfToPic", icon: <PictureOutlined /> },
+  { path: "/dashboard", title: "Dashboard" },
+  { path: "/usermanagement", title: "UserManagement" },
+  { path: "/pdftopic", title: "PdfToPic" },
   {
     path: "/documentmanagement",
     title: "DocumentManagement",
-    icon: <FileTextOutlined />,
-  },
+
+  }, {
+    path: "/checklist",
+    title: "CheckList",
+  }
 ];
 
 const Header = () => {

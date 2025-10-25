@@ -1,11 +1,12 @@
 
 import React, { Suspense, type ReactNode } from 'react';
 import {createBrowserRouter } from 'react-router-dom';
-const HomePage = React.lazy(() => import('../pages/Wellcome'));
+const Dashboard = React.lazy(() => import('../pages/Dashboard'));
 const UserManagement = React.lazy(() => import('../pages/UserManagement'));
 const PdfToPic = React.lazy(() => import("../pages/PdfToPic"));
 const DocumentManagement = React.lazy(() => import('../pages/DocumentManagement'));
 const Layout = React.lazy(() => import('../components/Layout'));
+const NieChecklist = React.lazy(() => import("../pages/Checklist/index"));
 interface NieRouteMap {
     path: string;
     auth: number; //是否需要登录访问
@@ -28,12 +29,12 @@ const RouterMap: NieRouteMap[] = [
     element: loadElement(<Layout />),
     children: [
       {
-        path: "/homepage",
+        path: "/dashboard",
         auth: 0,
-        title: "Homepage",
-        key: "homepage",
+        title: "Dashboard",
+        key: "dashboard",
         parentpath: "/",
-        element: loadElement(<HomePage />),
+        element: loadElement(<Dashboard />),
       },
       {
         path: "/usermanagement",
@@ -42,6 +43,13 @@ const RouterMap: NieRouteMap[] = [
         key: "usermanagement",
         parentpath: "/",
         element: loadElement(<UserManagement />),
+      },{
+        path: "/checklist",
+        auth: 0,
+        title: "CheckList",
+        key: "checklist",
+        parentpath: "/",
+        element: loadElement(<NieChecklist />),
       },
       {
         path: "/pdftopic",
