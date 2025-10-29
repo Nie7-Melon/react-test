@@ -79,7 +79,7 @@ const NieBasicInformation = () => {
         >
           <Row gutter={[32, 16]}>
             <Col span={8}>
-              <Form.Item label="昵称" name="name">
+              <Form.Item label="昵称" name="name" rules={[{ required: true }]}>
                 <Input />
               </Form.Item>
             </Col>
@@ -89,7 +89,11 @@ const NieBasicInformation = () => {
               </Form.Item>
             </Col>
             <Col span={8}>
-              <Form.Item label="生日" name="birthday">
+              <Form.Item
+                label="生日"
+                name="birthday"
+                rules={[{ required: true }]}
+              >
                 {/* <DatePicker /> */}
               </Form.Item>
             </Col>
@@ -109,7 +113,13 @@ const NieBasicInformation = () => {
 
           <Row gutter={[32, 16]}>
             <Col span={8}>
-              <Form.Item label=" " name="isLikeNovel" valuePropName="checked">
+              <Form.Item
+                name="isLikeNovel"
+                valuePropName="checked"
+                rules={[{ required: true }]}
+                label={null}
+                className={style["custom-checkbox-required"]}
+              >
                 <Checkbox>喜欢看小说嘛？</Checkbox>
               </Form.Item>
             </Col>
@@ -121,7 +131,11 @@ const NieBasicInformation = () => {
                 noStyle
               >
                 {() => (
-                  <Form.Item label="最喜欢的小说" name="likeNovel">
+                  <Form.Item
+                    label="最喜欢的小说"
+                    name="likeNovel"
+                    rules={[{ required: true }]}
+                  >
                     <Input disabled={!basicForm.getFieldValue("isLikeNovel")} />
                   </Form.Item>
                 )}
@@ -144,7 +158,7 @@ const NieBasicInformation = () => {
           </Row>
           <Row gutter={[32, 16]}>
             <Col span={8}>
-              <Form.Item label=" " name="check" >
+              <Form.Item label=" " name="check">
                 <Button onClick={basicFormSubmit}>校验测试</Button>
               </Form.Item>
             </Col>

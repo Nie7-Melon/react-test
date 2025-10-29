@@ -17,12 +17,22 @@
   flex-direction: column;
   gap: 16px;
 }
+.basicInformation .custom-checkbox-required {
+  position: relative;
+}
+.basicInformation .custom-checkbox-required::before {
+  content: '*';
+  color: #ff4d4f;
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  z-index: 1;
+}
 .hobbyInformation .hobbyInformation-title {
   font-size: 24px;
   font-weight: 500;
   color: #333333;
   margin-bottom: 10px;
 }
-
-
-
