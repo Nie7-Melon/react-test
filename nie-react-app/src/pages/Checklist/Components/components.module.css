@@ -1,4 +1,5 @@
 .basicInformation {
+  width: 100%;
   padding: 20px;
   background: #ffffff;
   border-radius: 8px;
@@ -11,6 +12,14 @@
   color: #333333;
   margin-bottom: 24px;
   text-align: center;
+}
+.basicInformation .basicInformation-title-span {
+  margin-left: 16px;
+  color: #c993e9;
+  font-size: 16px;
+}
+.basicInformation .basicInformation-declarer {
+  color: #c993e9;
 }
 .basicInformation .basicInformation-container {
   display: flex;
@@ -35,4 +44,9 @@
   font-weight: 500;
   color: #333333;
   margin-bottom: 10px;
+}
+.checkbox-required-item :global .ant-form-item-label {
+  left: 20px;
+  top: 24px;
+  z-index: 1;
 }
